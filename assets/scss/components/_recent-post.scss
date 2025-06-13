@@ -1,0 +1,150 @@
+@use '../abstracts/colors' as col;
+
+section.recent-posts{
+
+    .container{ 
+
+        h2.main-heading{
+            padding: 1em 0em ;
+        }
+
+        .recent-posts-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2em;
+
+            .post-card{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+
+                img{
+                    width: 100%;
+                    min-height: 230px;
+                }
+
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+
+                    a.main-heading{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+                        position: relative;          // establish containing block for pseudo
+                        font-weight: 600;
+                        padding-bottom: 0.1em;
+                        color: inherit;              // keep your existing text color
+                      
+                        &::after {
+                          content: "";
+                          position: absolute;
+                          left: 50%;
+                          bottom: 0;
+                          width: 0;
+                          height: 2px;
+                          background-color: col.$purple;
+                          transition: width 0.3s ease, left 0.3s ease;
+                        }
+                      
+                        &:hover::after {
+                          width: 100%;
+                          left: 0;
+                        }
+
+                    }
+    
+                    .info{
+                        color: col.$purple; 
+    
+                        a.animate {
+                            position: relative;          // establish containing block for pseudo
+                            font-weight: 600;
+                            padding-bottom: 0.1em;
+                            color: inherit;              // keep your existing text color
+                          
+                            &::after {
+                              content: "";
+                              position: absolute;
+                              left: 50%;
+                              bottom: 0;
+                              width: 0;
+                              height: 2px;
+                              background-color: col.$purple;
+                              transition: width 0.3s ease, left 0.3s ease;
+                            }
+                          
+                            &:hover::after {
+                              width: 100%;
+                              left: 0;
+                            }
+    
+                        }   
+                    }
+    
+                    h2{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+    
+                    .badge-container{
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5em;
+                    }
+                }
+            }
+
+            .sub-container{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 2em;
+
+                .post-card{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1em;
+
+                    img{
+                        width: 50%;
+                        height: auto;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1024px){
+    section.recent-posts{
+
+        .container{ 
+    
+            .recent-posts-container{
+                grid-template-columns: repeat(1, 1fr);
+    
+                .sub-container{
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    gap: 2em;
+    
+                    .post-card{
+                        flex-direction: column;
+    
+                        img{
+                            width: 100%;
+                        }
+    
+                    }
+    
+                }
+            }
+        }
+    }
+}

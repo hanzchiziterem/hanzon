@@ -8,13 +8,6 @@
     text-align: center;
 }
 
-@media (max-width: 1024px){
-    .hero-heading{
-        font-size: 5em;
-        width: calc(100vw - 2rem);
-    }
-}
-
 .main-heading{
     font-weight: 600;
     font-size: 1.5em;
@@ -23,4 +16,17 @@
 .sub-heading{
     font-weight: 600;
     font-size: 1.25em;
+}
+
+.info-heading{
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+
+@media (max-width: 1024px){
+    .hero-heading{
+        font-size: 5em;
+        width: calc(100vw - 2rem);
+    }
 }

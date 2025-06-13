@@ -1,0 +1,52 @@
+@use '../abstracts/colors' as col;
+
+.badge{
+    border-radius: 16px;
+    padding: 0.125em 0.625em;
+    font-size: 0.875em;
+    font-weight: 500;
+    vertical-align: middle;
+    transition: all 0.1s ease;
+}
+
+.red{ //infrastructre management
+    color: col.$red;
+    background-color: col.$bg-red;
+
+    &:hover{
+        background-color: col.$red;
+        color: col.$white;
+    }
+}
+
+.pink{ //interface presentation
+    color: col.$pink;
+    background-color: col.$bg-pink;
+
+    &:hover{
+        background-color: col.$pink;
+        color: col.$white;
+    }
+}
+
+.blue{ // reserach design
+    color: col.$blue;
+    background-color: col.$bg-blue;
+
+    &:hover{
+        background-color: col.$blue;
+        color: col.$white;
+    }
+}
+
+.violet{ //product software development
+    color: col.$violet;
+    background-color: col.$bg-violet;
+
+    &:hover{
+        background-color: col.$violet;
+        color: col.$white;
+    }
+}
+
+

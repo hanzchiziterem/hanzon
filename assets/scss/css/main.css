@@ -6,12 +6,6 @@
   text-align: center;
 }
 
-@media (max-width: 1024px) {
-  .hero-heading {
-    font-size: 5em;
-    width: calc(100vw - 2rem);
-  }
-}
 .main-heading {
   font-weight: 600;
   font-size: 1.5em;
@@ -20,6 +14,82 @@
 .sub-heading {
   font-weight: 600;
   font-size: 1.25em;
+}
+
+.info-heading {
+  font-size: 0.875em;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .hero-heading {
+    font-size: 5em;
+    width: calc(100vw - 2rem);
+  }
+}
+.badge {
+  border-radius: 16px;
+  padding: 0.125em 0.625em;
+  font-size: 0.875em;
+  font-weight: 500;
+  vertical-align: middle;
+  transition: all 0.1s ease;
+}
+
+.red {
+  color: #c01048;
+  background-color: #fff1f3;
+}
+.red:hover {
+  background-color: #c01048;
+  color: #fff;
+}
+
+.pink {
+  color: #c11574;
+  background-color: #fdf2fa;
+}
+.pink:hover {
+  background-color: #c11574;
+  color: #fff;
+}
+
+.blue {
+  color: #026aa2;
+  background-color: #f0f9ff;
+}
+.blue:hover {
+  background-color: #026aa2;
+  color: #fff;
+}
+
+.violet {
+  color: #3538cd;
+  background-color: #eef4ff;
+}
+.violet:hover {
+  background-color: #3538cd;
+  color: #fff;
+}
+
+a.animate {
+  position: relative;
+  font-weight: 600;
+  padding-bottom: 0.1em;
+  color: inherit;
+}
+a.animate::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+a.animate:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 *, *::before, *::after {
@@ -144,14 +214,14 @@ nav .container {
   align-items: center;
   padding: 2em 1em;
 }
-nav .container a {
+nav .container a.animate {
   position: relative;
   font-weight: 600;
   font-size: 1.25em;
   padding-bottom: 0.1em;
   color: inherit;
 }
-nav .container a::after {
+nav .container a.animate::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -161,7 +231,7 @@ nav .container a::after {
   background-color: #1a1a1a;
   transition: width 0.3s ease, left 0.3s ease;
 }
-nav .container a:hover::after {
+nav .container a.animate:hover::after {
   width: 100%;
   left: 0;
 }
@@ -231,6 +301,269 @@ section.hero .container #type-text .letter {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+}
+section.recent-posts .container h2.main-heading {
+  padding: 1em 0em;
+}
+section.recent-posts .container .recent-posts-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+section.recent-posts .container .recent-posts-container .post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+section.recent-posts .container .recent-posts-container .post-card img {
+  width: 100%;
+  min-height: 230px;
+}
+section.recent-posts .container .recent-posts-container .post-card .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+section.recent-posts .container .recent-posts-container .post-card .text a.main-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  font-weight: 600;
+  padding-bottom: 0.1em;
+  color: inherit;
+}
+section.recent-posts .container .recent-posts-container .post-card .text a.main-heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #6941c6;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+section.recent-posts .container .recent-posts-container .post-card .text a.main-heading:hover::after {
+  width: 100%;
+  left: 0;
+}
+section.recent-posts .container .recent-posts-container .post-card .text .info {
+  color: #6941c6;
+}
+section.recent-posts .container .recent-posts-container .post-card .text .info a.animate {
+  position: relative;
+  font-weight: 600;
+  padding-bottom: 0.1em;
+  color: inherit;
+}
+section.recent-posts .container .recent-posts-container .post-card .text .info a.animate::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #6941c6;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+section.recent-posts .container .recent-posts-container .post-card .text .info a.animate:hover::after {
+  width: 100%;
+  left: 0;
+}
+section.recent-posts .container .recent-posts-container .post-card .text h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.recent-posts .container .recent-posts-container .post-card .text .badge-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+section.recent-posts .container .recent-posts-container .sub-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2em;
+}
+section.recent-posts .container .recent-posts-container .sub-container .post-card {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+section.recent-posts .container .recent-posts-container .sub-container .post-card img {
+  width: 50%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  section.recent-posts .container .recent-posts-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section.recent-posts .container .recent-posts-container .sub-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+  }
+  section.recent-posts .container .recent-posts-container .sub-container .post-card {
+    flex-direction: column;
+  }
+  section.recent-posts .container .recent-posts-container .sub-container .post-card img {
+    width: 100%;
+  }
+}
+section.all-posts {
+  margin-top: 2.5em;
+}
+section.all-posts .container h2.main-heading {
+  padding: 1em 0em;
+}
+section.all-posts .container .all-posts-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+section.all-posts .container .all-posts-container .post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+section.all-posts .container .all-posts-container .post-card img {
+  width: 100%;
+  min-height: 230px;
+  max-height: 230px;
+}
+section.all-posts .container .all-posts-container .post-card .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+section.all-posts .container .all-posts-container .post-card .text a.main-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  font-weight: 600;
+  padding-bottom: 0.1em;
+  color: inherit;
+}
+section.all-posts .container .all-posts-container .post-card .text a.main-heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #6941c6;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+section.all-posts .container .all-posts-container .post-card .text a.main-heading:hover::after {
+  width: 100%;
+  left: 0;
+}
+section.all-posts .container .all-posts-container .post-card .text .info {
+  color: #6941c6;
+}
+section.all-posts .container .all-posts-container .post-card .text .info a.animate {
+  position: relative;
+  font-weight: 600;
+  padding-bottom: 0.1em;
+  color: inherit;
+}
+section.all-posts .container .all-posts-container .post-card .text .info a.animate::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #6941c6;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+section.all-posts .container .all-posts-container .post-card .text .info a.animate:hover::after {
+  width: 100%;
+  left: 0;
+}
+section.all-posts .container .all-posts-container .post-card .text h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.all-posts .container .all-posts-container .post-card .text .badge-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+@media (max-width: 1024px) {
+  section.all-posts {
+    margin-top: 3em;
+  }
+  section.all-posts .container .all-posts-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+  }
+}
+footer {
+  padding: 1em;
+}
+footer ul {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+footer ul a.animate {
+  font-size: 0.875em;
+  font-weight: 400;
+}
+footer ul a.animate::after {
+  background-color: #090d1f;
+}
+
+@media (max-width: 1024px) {
+  footer ul {
+    flex-direction: column-reverse;
+  }
+}
+nav.pagination {
+  padding: 1em 0em;
+}
+nav.pagination .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.pagination .container a {
+  color: #667085;
+  transition: 0.2s ease;
+}
+nav.pagination .container a:hover {
+  color: #1a1a1a;
+}
+nav.pagination .container ul {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+nav.pagination .container ul a {
+  font-size: 0.875em;
+  padding: 0.5em 0.8em;
+  border-radius: 8px;
+}
+nav.pagination .container ul a.active {
+  background-color: #f9f5ff;
+}
+
+@media (max-width: 1024px) {
+  nav.pagination .container {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  nav.pagination .container ul li:nth-child(8), nav.pagination .container ul li:nth-child(7), nav.pagination .container ul li:nth-child(6) {
+    display: none;
   }
 }
 

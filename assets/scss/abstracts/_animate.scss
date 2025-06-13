@@ -1,0 +1,24 @@
+@use '../abstracts/colors' as col;
+
+a.animate {
+    position: relative;          // establish containing block for pseudo
+    font-weight: 600;
+    padding-bottom: 0.1em;
+    color: inherit;              // keep your existing text color
+  
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+  
+    &:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+}  

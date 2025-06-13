@@ -2,6 +2,8 @@
 @use './abstracts/border-radius' as rad;
 @use './abstracts/colors' as col;
 @use './abstracts/headings' as head;
+@use './abstracts/badges' as badge;
+@use './abstracts/animate' as animate;
 
 //base
 @use './base/reset' as reset;
@@ -17,3 +19,7 @@
 //components
 @use './components/navbar' as navbar;
 @use './components/hero' as hero;
+@use './components/recent-post' as recent;
+@use './components/all-posts' as all-posts;
+@use './components/footer' as footer;
+@use './components/pagination' as pagination;

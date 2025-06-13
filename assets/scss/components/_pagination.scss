@@ -1,0 +1,51 @@
+@use '../abstracts/colors' as col;
+
+nav.pagination{
+    padding: 1em 0em;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a{
+            color: col.$gray;
+            transition: 0.2s ease;
+
+            &:hover{
+                color: col.$black;
+            }
+        }
+
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 1em;
+
+            a{
+                font-size: 0.875em;
+                padding: 0.5em 0.8em;
+                border-radius: 8px;
+            }
+
+            a.active{
+                background-color: col.$bg-purple;
+            }
+        }
+    }
+}
+
+
+@media (max-width:1024px){
+    nav.pagination{
+    
+        .container{
+            flex-direction: column;
+            gap: 1.5em;
+
+            ul li:nth-child(8),ul li:nth-child(7),ul li:nth-child(6){
+                display: none;
+            }
+        }
+    }
+}

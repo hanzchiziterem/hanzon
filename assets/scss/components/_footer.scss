@@ -1,0 +1,29 @@
+@use '../abstracts/colors' as col;
+
+footer{
+    padding: 1em;
+
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        a.animate{
+            font-size: 0.875em;
+            font-weight: 400;
+
+            &::after{
+                background-color: col.$bg-black;
+            }
+        }
+    }
+}
+
+@media(max-width:1024px){
+    footer{
+
+        ul{
+            flex-direction: column-reverse;
+        }
+    }
+}
