@@ -31,9 +31,34 @@
                 font-weight: 400;
             }
         }
+    }
 
-        i{
-            display: none;
+    i.bx-menu{
+        display: none;
+    }
+}
+
+
+@media (max-width: 1024px){
+    nav{
+
+        .container{
+            padding: 1em;
+
+
+            a{
+                font-size: 1em;
+            }
+
+            .nav-items{
+                display: none;
+            }
+
+            i.bx-menu{
+                display: block;
+                font-size: 2em;
+                cursor: pointer;
+            }
         }
     }
 }

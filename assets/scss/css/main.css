@@ -157,8 +157,25 @@ html body input::placeholder, html body textarea::placeholder {
 .container .nav-items ul a {
   font-weight: 400;
 }
-.container .nav-items i {
+.container i.bx-menu {
   display: none;
+}
+
+@media (max-width: 1024px) {
+  nav .container {
+    padding: 1em;
+  }
+  nav .container a {
+    font-size: 1em;
+  }
+  nav .container .nav-items {
+    display: none;
+  }
+  nav .container i.bx-menu {
+    display: block;
+    font-size: 2em;
+    cursor: pointer;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
