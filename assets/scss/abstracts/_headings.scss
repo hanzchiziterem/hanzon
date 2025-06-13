@@ -1,9 +1,18 @@
 //base
 @use '../abstracts/colors' as col;
 
-.title-logo{ //h1
+.hero-heading{ //h1
     font-weight: 700;
-    font-size: 15.2375em;
+    font-size: 17em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media (max-width: 1024px){
+    .hero-heading{
+        font-size: 5em;
+        width: calc(100vw - 2rem);
+    }
 }
 
 .main-heading{

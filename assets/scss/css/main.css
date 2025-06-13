@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
-.title-logo {
+.hero-heading {
   font-weight: 700;
-  font-size: 15.2375em;
+  font-size: 17em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
+@media (max-width: 1024px) {
+  .hero-heading {
+    font-size: 5em;
+    width: calc(100vw - 2rem);
+  }
+}
 .main-heading {
   font-weight: 600;
   font-size: 1.5em;
@@ -130,34 +138,47 @@ html body input::placeholder, html body textarea::placeholder {
   opacity: 1;
 }
 
-.container {
+nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2em 1em;
 }
-.container a {
+nav .container a {
+  position: relative;
   font-weight: 600;
   font-size: 1.25em;
   padding-bottom: 0.1em;
+  color: inherit;
 }
-.container a:hover {
-  border-bottom: 2px solid #1a1a1a;
+nav .container a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1a1a1a;
+  transition: width 0.3s ease, left 0.3s ease;
 }
-.container .nav-items {
+nav .container a:hover::after {
+  width: 100%;
+  left: 0;
+}
+nav .container .nav-items {
   display: flex;
   align-items: center;
-  gap: 1.5em;
+  gap: 1.8em;
 }
-.container .nav-items ul {
+nav .container .nav-items ul {
   display: flex;
   align-items: center;
-  gap: 1.5em;
+  gap: 1.8em;
 }
-.container .nav-items ul a {
+nav .container .nav-items ul a {
   font-weight: 400;
 }
-.container i.bx-menu {
+nav .container i.bx-menu {
   display: none;
 }
 
@@ -175,6 +196,41 @@ html body input::placeholder, html body textarea::placeholder {
     display: block;
     font-size: 2em;
     cursor: pointer;
+  }
+}
+section.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.hero .container {
+  padding-top: 2em;
+  /* each letter starts invisible and then fades in */
+}
+section.hero .container h1 {
+  border-top: 1px solid rgba(0, 0, 0, 0.34);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.34);
+}
+section.hero .container #type-text .letter {
+  display: inline-block; /* so opacity works per letter */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  section.hero {
+    /*         padding-left: 1em;
+            padding-right: 1em; */
+  }
+  section.hero .container {
+    padding: 1em 0em;
+    margin: 0;
+  }
+  section.hero .container h1 {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 

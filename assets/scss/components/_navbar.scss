@@ -1,42 +1,62 @@
 //abstracts
 @use '../abstracts/colors' as col;
 
-.container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2em 1em;
+nav{
 
-    a{
-        font-weight: 600;
-        font-size: 1.25em;
-        padding-bottom: 0.1em;
-        
-        &:hover{
-            border-bottom: 2px solid col.$black;
-        }
-    }
-
-    .nav-items{
+    .container{
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 1.5em;
+        padding: 2em 1em;
 
-        ul{
+        a {
+            position: relative;          // establish containing block for pseudo
+            font-weight: 600;
+            font-size: 1.25em;
+            padding-bottom: 0.1em;
+            color: inherit;              // keep your existing text color
+          
+            &::after {
+              content: "";
+              position: absolute;
+              left: 50%;
+              bottom: 0;
+              width: 0;
+              height: 2px;
+              background-color: col.$black;
+              transition: width 0.3s ease, left 0.3s ease;
+            }
+          
+            &:hover::after {
+              width: 100%;
+              left: 0;
+            }
+          }
+          
+
+        .nav-items{
             display: flex;
             align-items: center;
-            gap: 1.5em;
+            gap: 1.8em;
 
-            a{
-                font-weight: 400;
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 1.8em;
+
+                a{
+                    font-weight: 400;
+                }
             }
+        }
+
+        i.bx-menu{
+            display: none;
         }
     }
 
-    i.bx-menu{
-        display: none;
-    }
 }
+
 
 
 @media (max-width: 1024px){

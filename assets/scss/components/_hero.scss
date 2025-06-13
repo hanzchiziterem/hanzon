@@ -1,0 +1,46 @@
+//abstracts
+@use '../abstracts/colors' as col;
+
+section.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //min-width: 1200px;
+    
+    .container{
+        padding-top: 2em;
+
+        h1{
+            border-top: 1px solid col.$black-border;
+            border-bottom: 1px solid col.$black-border;
+        }     
+        
+        /* each letter starts invisible and then fades in */
+        #type-text .letter {
+            display: inline-block;       /* so opacity works per letter */
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+  
+    } 
+}
+
+
+@media (max-width: 1024px){
+    section.hero{
+/*         padding-left: 1em;
+        padding-right: 1em; */
+
+        .container{
+            padding: 1em 0em;
+            margin: 0;
+            
+            h1{
+                display: inline-block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}

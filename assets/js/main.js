@@ -19,3 +19,28 @@ checkbox.addEventListener('change', () => {
   localStorage.setItem('theme', theme);
 });
 
+
+//Hero Typing Script
+const text = "hanzon";
+const typingSpeed = 150; // ms between letters
+
+window.addEventListener("DOMContentLoaded", () => {
+  const target = document.getElementById("type-text");
+
+  // Loop through each character and schedule its insertion
+  [...text].forEach((char, i) => {
+    setTimeout(() => {
+      const span = document.createElement("span");
+      span.classList.add("letter");
+      span.textContent = char;
+      target.appendChild(span);
+
+      // trigger the fade‑in on the next paint
+      requestAnimationFrame(() => {
+        span.style.opacity = 1;
+      });
+    }, typingSpeed * i);
+  });
+});
+
+
