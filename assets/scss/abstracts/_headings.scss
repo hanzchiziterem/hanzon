@@ -1,0 +1,17 @@
+//base
+@use '../abstracts/colors' as col;
+
+.title-logo{ //h1
+    font-weight: 700;
+    font-size: 15.2375em;
+}
+
+.main-heading{
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.sub-heading{
+    font-weight: 600;
+    font-size: 1.25em;
+}

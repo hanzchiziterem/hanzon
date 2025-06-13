@@ -1,0 +1,57 @@
+//abstracts - colors
+@use '../abstracts/_colors' as col;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Inter Local';
+  src: url('/assets/scss/css/fonts/Inter-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+html{
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    transition: background 0.4s, color 0.4s;
+    transition: all 0.4s;
+
+
+    body {
+        background-color: col.$white;
+        color: col.$black;
+        font-family: 'Inter Local', 'Inter', sans-serif;
+        font-size: 1em;
+        line-height: 1.5;
+        min-height: 100vh;
+
+        p{
+          color: col.$gray;
+        }
+
+        ul,li{
+          list-style-type: none;
+        }
+
+        a{
+          text-decoration: none;
+          color: col.$black;
+        }
+
+        input,textarea{
+          font-size: 1em;
+          border: 1px solid;
+          outline: 0px;
+
+          &::placeholder{
+            font-family: 'Inter Local', 'Inter', sans-serif;
+            font-size: 1em;
+          }
+        }
+
+    }
+}
+
+

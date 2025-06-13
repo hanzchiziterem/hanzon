@@ -1,3 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+.title-logo {
+  font-weight: 700;
+  font-size: 15.2375em;
+}
 
+.main-heading {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.sub-heading {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Inter Local";
+  src: url("/assets/scss/css/fonts/Inter-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+}
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background 0.4s, color 0.4s;
+  transition: all 0.4s;
+}
+html body {
+  background-color: #fff;
+  color: #1a1a1a;
+  font-family: "Inter Local", "Inter", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+html body p {
+  color: #667085;
+}
+html body ul, html body li {
+  list-style-type: none;
+}
+html body a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+html body input, html body textarea {
+  font-size: 1em;
+  border: 1px solid;
+  outline: 0px;
+}
+html body input::placeholder, html body textarea::placeholder {
+  font-family: "Inter Local", "Inter", sans-serif;
+  font-size: 1em;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-sm {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 4em;
+  height: 2em;
+  background-color: #1a1a1a;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.theme-toggle .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+  color: #fff;
+}
+.theme-toggle .bx-sun {
+  left: 0.5em;
+  opacity: 1;
+}
+.theme-toggle .bx-moon {
+  right: 0.5em;
+  opacity: 0;
+}
+.theme-toggle .slider {
+  position: absolute;
+  top: 0.25em;
+  left: 2.25em;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+.theme-toggle input:checked ~ .slider {
+  left: 0.25em;
+}
+.theme-toggle input:checked ~ .bx-sun {
+  opacity: 0;
+}
+.theme-toggle input:checked ~ .bx-moon {
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 1em;
+}
+.container a {
+  font-weight: 600;
+  font-size: 1.25em;
+  padding-bottom: 0.1em;
+}
+.container a:hover {
+  border-bottom: 2px solid #1a1a1a;
+}
+.container .nav-items {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+.container .nav-items ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+.container .nav-items ul a {
+  font-weight: 400;
+}
+.container .nav-items i {
+  display: none;
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,39 @@
+//abstracts
+@use '../abstracts/colors' as col;
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 1em;
+
+    a{
+        font-weight: 600;
+        font-size: 1.25em;
+        padding-bottom: 0.1em;
+        
+        &:hover{
+            border-bottom: 2px solid col.$black;
+        }
+    }
+
+    .nav-items{
+        display: flex;
+        align-items: center;
+        gap: 1.5em;
+
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 1.5em;
+
+            a{
+                font-weight: 400;
+            }
+        }
+
+        i{
+            display: none;
+        }
+    }
+}
