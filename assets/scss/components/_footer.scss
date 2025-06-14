@@ -13,7 +13,7 @@ footer{
             font-weight: 400;
 
             &::after{
-                background-color: col.$bg-black;
+                background-color: var(--black);
             }
         }
     }

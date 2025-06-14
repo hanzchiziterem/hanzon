@@ -1,4 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+:root {
+  --black: #1a1a1a;
+  --white: #fff;
+  --bg-black: #090d1f;
+  --black-border: rgba(0,0,0,0.34);
+}
+
+:root.dark {
+  --black: #fff;
+  --white: #1a1a1a;
+  --black-border: rgba(255, 255, 255, 0.34);
+}
+
 .hero-heading {
   font-weight: 700;
   font-size: 17em;
@@ -100,46 +112,49 @@ a.animate:hover::after {
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Inter Local";
-  src: url("/assets/scss/css/fonts/Inter-VariableFont_wght.ttf") format("truetype");
-  font-display: swap;
-}
 html {
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  transition: background 0.4s, color 0.4s;
   transition: all 0.4s;
 }
-html body {
-  background-color: #fff;
-  color: #1a1a1a;
+
+body {
+  background-color: var(--white);
+  color: var(--black);
   font-family: "Inter Local", "Inter", sans-serif;
   font-size: 1em;
   line-height: 1.5;
   min-height: 100vh;
 }
-html body p {
-  color: #667085;
+body p {
+  color: var(--black);
 }
-html body ul, html body li {
+body ul,
+body li {
   list-style-type: none;
 }
-html body a {
+body a {
   text-decoration: none;
-  color: #1a1a1a;
+  color: var(--black);
 }
-html body input, html body textarea {
+body input,
+body textarea {
   font-size: 1em;
   border: 1px solid;
   outline: 0px;
 }
-html body input::placeholder, html body textarea::placeholder {
+body input::placeholder,
+body textarea::placeholder {
   font-family: "Inter Local", "Inter", sans-serif;
   font-size: 1em;
+  color: var(--black);
+}
+
+html.dark body {
+  background-color: var(--bg-black);
 }
 
 .container {
@@ -156,41 +171,45 @@ html body input::placeholder, html body textarea::placeholder {
 
 .theme-toggle {
   position: relative;
-  display: inline-block;
-  width: 4em;
-  height: 2em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 4.5em;
+  height: 2.5em;
+  padding: 0.25em 0.5em;
+  box-sizing: border-box;
   background-color: #1a1a1a;
-  border-radius: 1em;
+  border: 1px solid #fff;
+  border-radius: 1.25em;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 .theme-toggle input {
+  position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
-  position: absolute;
 }
 .theme-toggle .icon {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   font-size: 1.2em;
+  color: #fff;
   z-index: 2;
   transition: opacity 0.3s ease;
-  color: #fff;
+  pointer-events: none;
 }
 .theme-toggle .bx-sun {
-  left: 0.5em;
   opacity: 1;
+  margin-left: 0.25em;
 }
 .theme-toggle .bx-moon {
-  right: 0.5em;
   opacity: 0;
+  margin-right: 0.25em;
 }
 .theme-toggle .slider {
   position: absolute;
-  top: 0.25em;
-  left: 2.25em;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(100% - 0.5em - 1.5em);
   width: 1.5em;
   height: 1.5em;
   background-color: #fff;
@@ -199,7 +218,7 @@ html body input::placeholder, html body textarea::placeholder {
   z-index: 1;
 }
 .theme-toggle input:checked ~ .slider {
-  left: 0.25em;
+  left: 0.5em;
 }
 .theme-toggle input:checked ~ .bx-sun {
   opacity: 0;
@@ -278,8 +297,8 @@ section.hero .container {
   /* each letter starts invisible and then fades in */
 }
 section.hero .container h1 {
-  border-top: 1px solid rgba(0, 0, 0, 0.34);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.34);
+  border-top: 1px solid var(--black-border);
+  border-bottom: 1px solid var(--black-border);
 }
 section.hero .container #type-text .letter {
   display: inline-block; /* so opacity works per letter */
@@ -520,7 +539,7 @@ footer ul a.animate {
   font-weight: 400;
 }
 footer ul a.animate::after {
-  background-color: #090d1f;
+  background-color: var(--black);
 }
 
 @media (max-width: 1024px) {
@@ -541,7 +560,7 @@ nav.pagination .container a {
   transition: 0.2s ease;
 }
 nav.pagination .container a:hover {
-  color: #1a1a1a;
+  color: var(--black);
 }
 nav.pagination .container ul {
   display: flex;
@@ -565,6 +584,58 @@ nav.pagination .container ul a.active {
   nav.pagination .container ul li:nth-child(8), nav.pagination .container ul li:nth-child(7), nav.pagination .container ul li:nth-child(6) {
     display: none;
   }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  z-index: 1000;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  pointer-events: none;
+}
+.overlay.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.overlay .overlay-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.overlay .overlay-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 4rem 0rem;
+  padding: 0;
+}
+.overlay .overlay-menu li {
+  margin-bottom: 1.5rem;
+}
+.overlay .overlay-menu li a {
+  text-decoration: none;
+  font-size: 1.75rem;
+  color: var(--black);
+  transition: color 0.2s;
+}
+
+.menu-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */

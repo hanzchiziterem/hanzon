@@ -1,51 +1,53 @@
-@use '../abstracts/colors' as col; // adjust if needed
+@use '../abstracts/colors' as col;
 
 .theme-toggle {
   position: relative;
-  display: inline-block;
-  width: 4em;    //  Toggle width
-  height: 2em;   // Toggle height
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 4.5em;                 // +0.5em wider
+  height: 2.5em;                // +0.5em taller
+  padding: 0.25em 0.5em;        // vertical .25em, horizontal .5em
+  box-sizing: border-box;       // include padding in width/height
   background-color: col.$black;
-  border-radius: 1em;
+  border: 1px solid col.$white;
+  border-radius: 1.25em;        // a bit more rounded
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 
   input {
+    position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
-    position: absolute;
   }
 
-  // Icon Base
   .icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2em; //  Icon size
+    font-size: 1.2em;
+    color: col.$white;
     z-index: 2;
     transition: opacity 0.3s ease;
-    color: col.$white;
+    pointer-events: none;
   }
 
-  //  Sun on left
   .bx-sun {
-    left: 0.5em;
     opacity: 1;
+    margin-left: 0.25em;        // ensure it’s off the left padding
   }
 
-  //  Moon on right, hidden in light mode
   .bx-moon {
-    right: 0.5em;
     opacity: 0;
+    margin-right: 0.25em;       // keep it off the right padding
   }
 
-  // Circle slider
   .slider {
     position: absolute;
-    top: 0.25em;
-    left: 2.25em; // default position: right
-    width: 1.5em; //  Slider size
+    // center vertically
+    top: 50%;
+    transform: translateY(-50%);
+    // horizontally: 100% minus right padding (0.5em) minus slider width (1.5em)
+    left: calc(100% - 0.5em - 1.5em);
+    width: 1.5em;
     height: 1.5em;
     background-color: col.$white;
     border-radius: 50%;
@@ -53,9 +55,8 @@
     z-index: 1;
   }
 
-  //  Toggle to dark
   input:checked ~ .slider {
-    left: 0.25em; // move to left to cover sun
+    left: 0.5em;                // move to left padding
   }
 
   input:checked ~ .bx-sun {

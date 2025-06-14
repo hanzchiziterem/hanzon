@@ -16,25 +16,42 @@
 <body>
     <nav>
         <div class="container">
-            <a href="#" class="username animate">Your Name</a>
-
-            <div class="nav-items">
-                <ul>
-                    <li><a href="#" class="animate">Blog</a></li>
-                    <li><a href="#" class="animate">Projects</a></li>
-                    <li><a href="#" class="animate">About</a></li>
-                    <li><a href="#" class="animate">Newsletter</a></li>
-                </ul>
-                <label class="theme-toggle">
-                    <input type="checkbox" id="theme-checkbox" />
-                    <i class='bx bx-sun icon'></i>
-                    <i class='bx bx-moon icon'></i>
-                    <span class="slider"></span>
-                </label>                
-            </div>
-            <i class="bx bx-menu"></i> 
+          <a href="#" class="username animate">Your Name</a>
+          <div class="nav-items">
+            <ul>
+              <li><a href="#" class="animate">Blog</a></li>
+              <li><a href="#" class="animate">Projects</a></li>
+              <li><a href="#" class="animate">About</a></li>
+              <li><a href="#" class="animate">Newsletter</a></li>
+            </ul>
+            <label class="theme-toggle">
+              <input type="checkbox" id="theme-checkbox" />
+              <i class='bx bx-sun icon'></i>
+              <i class='bx bx-moon icon'></i>
+              <span class="slider"></span>
+            </label>
+          </div>
+          <i class="bx bx-menu menu-toggle"></i>
         </div>
-    </nav>
+      </nav>
+      
+      <!-- the overlay -->
+      <div class="overlay">
+        <i class="bx bx-x overlay-close"></i>
+        <ul class="overlay-menu">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><label class="theme-toggle">
+            <input type="checkbox" id="theme-checkbox" />
+            <i class='bx bx-sun icon'></i>
+            <i class='bx bx-moon icon'></i>
+            <span class="slider"></span>
+          </label></li>
+        </ul>
+      </div>
+      
 
     <section class="hero">
         <div class="container">

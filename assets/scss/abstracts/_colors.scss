@@ -16,3 +16,20 @@ $bg-red: #fff1f3;
 
 //Dark Mode
 $bg-black: #090d1f;
+
+:root{
+    --black: #1a1a1a;
+    --white: #fff;
+    --bg-black: #090d1f;
+    --black-border: rgba(0,0,0,0.34);
+    
+}
+
+:root.dark {
+    --black: #fff;        // text/icons become white in dark mode
+    --white: #1a1a1a;
+    --black-border: rgba(255, 255, 255, 0.34);
+
+    // --white stays same
+    // --bg-black stays same
+  }
