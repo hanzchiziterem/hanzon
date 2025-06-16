@@ -232,6 +232,7 @@ nav .container {
   justify-content: space-between;
   align-items: center;
   padding: 2em 1em;
+  padding-bottom: 0em;
 }
 nav .container a.animate {
   position: relative;
@@ -274,6 +275,7 @@ nav .container i.bx-menu {
 @media (max-width: 1024px) {
   nav .container {
     padding: 1em;
+    padding-bottom: 0em;
   }
   nav .container a {
     font-size: 1em;

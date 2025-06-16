@@ -8,6 +8,7 @@ nav{
         justify-content: space-between;
         align-items: center;
         padding: 2em 1em;
+        padding-bottom: 0em;
 
         a.animate {
             position: relative;          // establish containing block for pseudo
@@ -64,6 +65,7 @@ nav{
 
         .container{
             padding: 1em;
+            padding-bottom: 0em;
 
 
             a{
