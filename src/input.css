@@ -1,1 +1,21 @@
 @import 'tailwindcss';
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../public/css/fonts/Inter-VariableFont_wght.ttf) format('truetype');
+}
+
+:root{
+    --bg-color: #f3f3f3;
+    --text-color: #1a1a1a;
+    --gray: rgba(255, 255, 255, 0.34);
+}
+
+/* dark mode override */
+.dark{
+    --bg-color: #090d1f;
+    --text-color: #f3f3f3;
+}
+body{
+    font-family: 'inter', system-ui, -apple-system;
+}

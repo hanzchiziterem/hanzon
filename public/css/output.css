@@ -156,3 +156,10 @@
   }
 }
 @layer utilities;
+@font-face {
+  font-family: 'Inter';
+  src: url(../public/css/fonts/Inter-VariableFont_wght.ttf) format('truetype');
+}
+body {
+  font-family: 'inter', system-ui, -apple-system;
+}
