@@ -8,11 +8,13 @@
 :root{
     /* components */
     --theme-btn-color: #1a1a1a; /* for theme btn*/
-    --theme-btn-boredr: #fff; /* for theme btn*/
+    --theme-btn-boredr: #f3f3f3; /* for theme btn*/
 
     --bg-color: #f3f3f3;
     --text-color: #1a1a1a;
     --var-black: #1a1a1a;
+
+    --black: #1a1a1a;
     --gray: #c0c0c063;
 
     --purple: #6941c6;
@@ -26,7 +28,7 @@
     --red: #c01048;
     --bg-red: #fff1f3;
 
-    --white: #fff;
+    --white: #f3f3f3;
 }
 
 /* dark mode override */
@@ -34,6 +36,7 @@ html.dark{
     --bg-color: #090d1f;
     --text-color: #f3f3f3;
     --var-black: #f3f3f3;
+    --var-white: #1a1a1a;
 }
 
 body{
@@ -239,3 +242,29 @@ footer a.animate::after{
     transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
 
+
+
+/* BACK TO TOP */
+#backToTop{
+    animation: bounce 1s ease infinite;
+    -webkit-animation: bounce 1s ease infinite;
+    background-color: var(--white);
+    position:fixed;
+    bottom: 50px;
+    right: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s linear;
+    transition: opacity 0.3s ease, visibility 0.3s;
+    z-index: 10000;
+}
+
+#backToTop.show{
+    opacity: 0.85;
+    visibility: visible;
+    transition: all 0.2s linear;
+}
+
+#backToTop.show:hover{
+    background-color: var(--purple);
+}

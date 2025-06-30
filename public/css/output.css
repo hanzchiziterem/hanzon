@@ -20,8 +20,6 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -208,29 +206,14 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
-  .h-1 {
-    height: calc(var(--spacing) * 1);
-  }
   .h-1\/1 {
     height: calc(1/1 * 100%);
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-1\/1 {
     width: calc(1/1 * 100%);
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .resize {
-    resize: both;
+  .cursor-pointer {
+    cursor: pointer;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -265,13 +248,6 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
-  .space-y-4 {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
-    }
-  }
   .space-y-6 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -293,6 +269,9 @@
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
+  }
+  .border-\[var\(--var-black\)\] {
+    border-color: var(--var-black);
   }
   .border-t-\[var\(--gray\)\] {
     border-top-color: var(--gray);
@@ -320,6 +299,9 @@
   }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
@@ -367,6 +349,9 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .text-\[var\(--black\)\] {
+    color: var(--black);
+  }
   .text-\[var\(--blue\)\] {
     color: var(--blue);
   }
@@ -381,18 +366,6 @@
   }
   .uppercase {
     text-transform: uppercase;
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .duration-200 {
     --tw-duration: 200ms;
@@ -413,6 +386,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--pink);
+      }
+    }
+  }
+  .hover\:bg-\[var\(--purple\)\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--purple);
       }
     }
   }
@@ -471,10 +451,11 @@
 }
 :root {
   --theme-btn-color: #1a1a1a;
-  --theme-btn-boredr: #fff;
+  --theme-btn-boredr: #f3f3f3;
   --bg-color: #f3f3f3;
   --text-color: #1a1a1a;
   --var-black: #1a1a1a;
+  --black: #1a1a1a;
   --gray: #c0c0c063;
   --purple: #6941c6;
   --bg-purple: #f9f5ff;
@@ -486,12 +467,13 @@
   --bg-violet: #eef4ff;
   --red: #c01048;
   --bg-red: #fff1f3;
-  --white: #fff;
+  --white: #f3f3f3;
 }
 html.dark {
   --bg-color: #090d1f;
   --text-color: #f3f3f3;
   --var-black: #f3f3f3;
+  --var-white: #1a1a1a;
 }
 body {
   font-family: 'inter', system-ui, -apple-system;
@@ -646,25 +628,26 @@ footer a.animate::after {
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
+#backToTop {
+  animation: bounce 1s ease infinite;
+  -webkit-animation: bounce 1s ease infinite;
+  background-color: var(--white);
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s linear;
+  transition: opacity 0.3s ease, visibility 0.3s;
+  z-index: 10000;
 }
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
+#backToTop.show {
+  opacity: 0.85;
+  visibility: visible;
+  transition: all 0.2s linear;
 }
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
+#backToTop.show:hover {
+  background-color: var(--purple);
 }
 @property --tw-space-y-reverse {
   syntax: "*";
@@ -680,11 +663,6 @@ footer a.animate::after {
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -693,18 +671,22 @@ footer a.animate::after {
   syntax: "*";
   inherits: false;
 }
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
     }
