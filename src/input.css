@@ -13,15 +13,27 @@
     --bg-color: #f3f3f3;
     --text-color: #1a1a1a;
     --var-black: #1a1a1a;
-    --gray: rgba(255, 255, 255, 0.34);
+    --gray: #c0c0c063;
 
-    --white: #f3f3f3;
+    --purple: #6941c6;
+    --bg-purple: #f9f5ff;
+    --blue: #026aa2;
+    --bg-blue: #f0f9ff;
+    --pink: #c11574;
+    --bg-pink: #fdf2fa;
+    --violet: #3538cd; 
+    --bg-violet: #eef4ff;
+    --red: #c01048;
+    --bg-red: #fff1f3;
+
+    --white: #fff;
 }
 
 /* dark mode override */
 html.dark{
     --bg-color: #090d1f;
     --text-color: #f3f3f3;
+    --var-black: #f3f3f3;
 }
 
 body{
@@ -57,6 +69,21 @@ a.animate:hover::after {
 nav a.animate::after{
     background-color: var(--var-black);
 }
+
+/* HERO */
+#hero h1 {
+  font-size: clamp(3rem, 22vw, 17em);
+  line-height: 1;
+  white-space: nowrap;
+  margin: 0;
+}
+
+/* RECENT POSTS */
+#recent-posts a.animate::after{
+    background-color: var(--purple);
+}
+
+
 
 /* COMPONENTS */
 
@@ -127,3 +154,59 @@ nav a.animate::after{
 .theme-toggle input:checked ~ .bx-moon {
     opacity: 1;
 }
+
+
+/* HAMBURGER MENU */
+.hamburger{
+    display: none;
+
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+    background-color: transparent;
+    border: none;
+}
+
+@media (max-width:1024px){
+    .hamburger{
+        display: block;
+    }
+}
+
+.hamburger-top,.hamburger-middle,.hamburger-bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26.5px;
+    height: 2.5px;
+    background-color: var(--var-black);
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburger-middle{
+    transform: translateY(7px);
+    transition: 0s;
+}
+
+.hamburger-bottom{
+    transform: translateY(14px);
+}
+
+.open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+}
+
+.open .hamburger-top{
+    transform: rotate(45deg) translateY(6px) translate(6px);
+}
+.open .hamburger-middle{
+    display: none;
+}
+.open .hamburger-bottom{
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
