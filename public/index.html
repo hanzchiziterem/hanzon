@@ -48,7 +48,7 @@
 
     <section id="hero">
         <div class=" container mx-auto p-4 pb-8 flex items-center justify-center border-b-[var(--gray)] border-b border-t border-t-[var(--gray)]">
-            <h1 class="uppercase text-center font-bold">hanzon</h1>
+            <h1 class="uppercase text-center font-bold" id="type-text"></h1> <!--Type hanzon from js-->
         </div>
     </section>
 
@@ -265,6 +265,26 @@
         </div>
     </section>
 
+    <section id="pagination">
+        <div class="container mx-auto px-4 py-6 flex flex-col space-y-6 md:space-y-0 md:flex-row justify-between items-center">
+            <a href="#" class="flex items-center text-base hover:text-[var(--purple)] duration-200"><i class="bx bx-chevron-left"></i>Previous</a>
+
+            <!--pagination-->
+            <ul class="flex items-center gap-4 text-sm" id="pages">
+                <li><a href="#" class="active">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+            </ul>
+
+            <a href="#" class ="flex items-center text-base hover:text-[var(--purple)] duration-200">Next<i class="bx bx-chevron-right"></i></a>
+        </div>
+    </section>
+    
     <footer>
         <div class="container mx-auto px-4 py-7 flex flex-col-reverse md:flex-row items-center justify-center md:justify-start gap-4">
             <div class="flex items-center gap-4">
@@ -272,10 +292,10 @@
                 <a href="#" class ="animate text-sm">Add to Feedly</a>
             </div>
             <div class="flex items-center gap-4">
-                <a href="#"><i class="bx bx-envelope text-xl hover:text-[var(--purple)] duration-200"></i></a>
-                <a href="#"><i class="bx bxl-linkedin text-xl hover:text-[var(--purple)] duration-200"></i></a>
-                <a href="#"><i class="bx bxl-twitter text-xl hover:text-[var(--purple)] duration-200"></i></a>
-                <a href="#"><i class="bx bxl-facebook text-xl hover:text-[var(--purple)] duration-200"></i></a>
+                <a href="#"><i class="bx bx-envelope text-2xl hover:text-[var(--purple)] duration-200"></i></a>
+                <a href="#"><i class="bx bxl-linkedin text-2xl hover:text-[var(--purple)] duration-200"></i></a>
+                <a href="#"><i class="bx bxl-twitter text-2xl hover:text-[var(--purple)] duration-200"></i></a>
+                <a href="#"><i class="bx bxl-facebook text-2xl hover:text-[var(--purple)] duration-200"></i></a>
             </div>
         </div>
     </footer>

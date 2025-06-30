@@ -1,14 +1,3 @@
-//NAVBAR SCROLL SCRIPT
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('nav.navbar');
-
-    if (window.scrollY > 10){
-        navbar.classList.add('scrolled');
-    }else{
-        navbar.classList.remove('scrolled');
-    }
-});
-
 
 //HAMBURGER MENU SCRIPT
 const btn = document.getElementById('menu-btn');
@@ -40,5 +29,28 @@ checkboxes.forEach(cb => {
     root.classList.toggle('dark', cb.checked);
     checkboxes.forEach(c => c.checked = cb.checked); // sync both toggles
     localStorage.setItem('theme', theme);
+  });
+});
+
+//Hero Typing Script
+const text = "hanzon";
+const typingSpeed = 150; // ms between letters
+
+window.addEventListener("DOMContentLoaded", () => {
+  const target = document.getElementById("type-text");
+
+  // Loop through each character and schedule its insertion
+  [...text].forEach((char, i) => {
+    setTimeout(() => {
+      const span = document.createElement("span");
+      span.classList.add("letter");
+      span.textContent = char;
+      target.appendChild(span);
+
+      // trigger the fade‑in on the next paint
+      requestAnimationFrame(() => {
+        span.style.opacity = 1;
+      });
+    }, typingSpeed * i);
   });
 });
