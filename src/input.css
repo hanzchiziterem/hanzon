@@ -88,6 +88,11 @@ nav a.animate::after{
     background-color: var(--purple);
 }
 
+/* FOOTER */
+footer a.animate::after{
+    background-color: var(--var-black);
+}
+
 
 /* COMPONENTS */
 
