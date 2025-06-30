@@ -6,16 +6,124 @@
 }
 
 :root{
+    /* components */
+    --theme-btn-color: #1a1a1a; /* for theme btn*/
+    --theme-btn-boredr: #fff; /* for theme btn*/
+
     --bg-color: #f3f3f3;
     --text-color: #1a1a1a;
+    --var-black: #1a1a1a;
     --gray: rgba(255, 255, 255, 0.34);
+
+    --white: #f3f3f3;
 }
 
 /* dark mode override */
-.dark{
+html.dark{
     --bg-color: #090d1f;
     --text-color: #f3f3f3;
 }
+
 body{
     font-family: 'inter', system-ui, -apple-system;
+}
+
+/* GENERAL */
+/* animated hover */
+a.animate {
+    position: relative;
+    padding-bottom: 0.1em;         
+}
+
+a.animate::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    /* background-color: var(--black); */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+          
+a.animate:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+
+/* NAVBAR */
+nav a.animate::after{
+    background-color: var(--var-black);
+}
+
+/* COMPONENTS */
+
+/* THEME BUTTON */
+.theme-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 3.85em;
+    height: 2em;
+    padding: 0.25em 0.5em;
+    box-sizing: border-box;
+    background-color: var(--theme-btn-color);
+    border: 1px solid var(--theme-btn-boredr);
+    border-radius: 1.25em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-toggle .icon {
+    font-size: 0.9em;
+    color: var(--white);
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.theme-toggle .bx-sun {
+    opacity: 1;
+}
+
+.theme-toggle .bx-moon {
+    opacity: 0;
+    margin-left: 0.25em;
+}
+
+.theme-toggle .slider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* align to right padding: 0.5em */
+    left: calc(100% - 0.5em - 1.2em);
+    width: 1.2em;
+    height: 1.2em;
+    background-color: var(--white);
+    border-radius: 50%;
+    transition: left 0.3s ease;
+    z-index: 1;
+}
+
+.theme-toggle input:checked ~ .slider {
+    /* align to left padding: 0.5em */
+    left: 0.5em;
+}
+
+.theme-toggle input:checked ~ .bx-sun {
+    opacity: 0;
+}
+
+.theme-toggle input:checked ~ .bx-moon {
+    opacity: 1;
 }

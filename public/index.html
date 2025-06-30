@@ -14,11 +14,31 @@
 
     <!--CDNs Offline-->
     <link rel="stylesheet" href="./css/boxicons/css/boxicons.min.css">
+
+    <!--npx @tailwindcss/cli -i ./src/input.css -o ./public/css/output.css --watch-->
+
+    <!-- in your head, before loading tailwindcss.com -->
 </head>
-<body>
-    <nav class="container flex justify-between px-4 py-5">
-        <a href="./index.html">Your Name</a>
-        <a href="./index.html">Your Name</a>
+<body class="bg-[var(--bg-color)] text-[var(--text-color)]">
+    <nav class="container flex justify-between items-center mx-auto px-4 py-5 text-lg font-semibold">
+        <a href="./index.html" class="animate logo">Your Name</a>
+        
+        <div class="hidden md:flex gap-8 items-center">
+            <ul class="flex gap-8">
+                <li><a href="#" class="animate">Blog</a></li>
+                <li><a href="#" class="animate">Projects</a></li>
+                <li><a href="#" class="animate">About</a></li>
+                <li><a href="#" class="animate">Newsletter</a></li>
+            </ul>
+            <label class="theme-toggle">
+              <input type="checkbox" id="theme-checkbox" />
+              <i class='bx bx-sun icon'></i>
+              <i class='bx bx-moon icon'></i>
+              <span class="slider"></span>
+            </label>
+        </div>
     </nav>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>
