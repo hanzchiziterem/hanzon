@@ -88,6 +88,31 @@ nav a.animate::after{
     background-color: var(--purple);
 }
 
+/* PAGINATION */
+#pagination #pages a{
+    background-color: var(--gray);
+    padding: 0.2em 0.5em;
+    border-radius: 8px;
+    transition: all 0.2s linear;
+}
+
+#pagination #pages a:hover{
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+#pagination #pages a.active{
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+
+
+/* FOOTER */
+footer a.animate::after{
+    background-color: var(--var-black);
+}
+
 
 /* COMPONENTS */
 
