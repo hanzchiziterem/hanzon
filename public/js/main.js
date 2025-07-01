@@ -1,13 +1,33 @@
+ //HAMBURGER MENU SCRIPT
 
-//HAMBURGER MENU SCRIPT
 const btn = document.getElementById('menu-btn');
 const nav = document.getElementById('menu');
 
 btn.addEventListener('click', () => {
-  btn.classList.toggle('open')
-  nav.classList.toggle('flex')
-  nav.classList.toggle('hidden')
-})
+  btn.classList.toggle('open');
+
+  if (nav.classList.contains('max-h-0')) {
+    nav.classList.remove('max-h-0');
+    nav.classList.add('max-h-[500px]'); // height should be enough to reveal full overlay
+  } else {
+    nav.classList.add('max-h-0');
+    nav.classList.remove('max-h-[500px]');
+  }
+});
+
+
+// NAVBAR SCROLL SCRIPT
+//NAVBAR SCROLL SCRIPT
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('nav.navbar');
+
+    if (window.scrollY > 10){
+        navbar.classList.add('scrolled');
+    }else{
+        navbar.classList.remove('scrolled');
+    }
+});
+
 
 
 //Theme Script
