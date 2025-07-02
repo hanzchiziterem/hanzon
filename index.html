@@ -7,13 +7,13 @@
     <title>Hanzon Blog</title>
 
     <!--stylesheet-->
-    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="./public/css/output.css">
 
     <!--CDNs Online-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!--CDNs Offline-->
-    <link rel="stylesheet" href="./css/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="./public/css/boxicons/css/boxicons.min.css">
 
     <!--npx @tailwindcss/cli -i ./src/input.css -o ./public/css/output.css --watch-->
 
@@ -35,7 +35,7 @@
   </div>
 
   <!-- Mobile Dropdown (hidden by default, visible when menu opens) -->
-  <div id="menu" class="w-full max-h-0 overflow-hidden transition-all duration-500 md:hidden">
+  <div id="menu" class="w-full max-h-0 overflow-hidden transition-all duration-200 md:hidden">
     <ul class="flex flex-col gap-4 py-4">
       <li><a href="#" class="block animate">Blog</a></li>
       <li><a href="#" class="block animate">Projects</a></li>
@@ -76,14 +76,14 @@
 
     <section id="recent-posts">
         <div class="container mx-auto px-4 py-6">
-            <h3 class="font-semibold text-xl pb-6">Recent blog posts</h3>
+            <h3 class="font-semibold text-2xl pb-6">Recent blog posts</h3>
 
-            <div class=" grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div class=" grid grid-cols-1  gap-8 md:gap-7 md:grid-cols-2">
 
-                <!--grid child 1-->
+                <!--grid child 1 (The long grid/first grid to the left)-->
                 <div class="grid-cols-1">
-                    <img src="./img/Fix.png" alt="" class="w-1/1">
-                    <div class="text-[var(--purple)] font-semibold mt-4">
+                    <img src="./public/img/Fix.png" alt="" class="w-1/1 h-auto">
+                    <div class="text-[var(--purple)] font-semibold mt-4 ">
                         <a href="#" class="info-heading animate">Olivia Rhye</a> &bull; <a href="#" class="animate">1 Jan 2025</a>
                     </div>
                     <a href="#" class="mt-4 mb-2 flex items-center justify-between font-bold text-2xl animate">UX review presentation<i class="bx bx-link-external"></i></a>
@@ -99,15 +99,15 @@
                 </div>
 
                 <!--grid child 2-->
-                <div class="grid-cols-2 space-y-6">
+                <div class="grid-cols-2 md:space-y-6 space-y-8">
 
                     <!--grid-child 2.1-->
                     <div class="grid-cols-1">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <img src="./img/Image 7.png" alt="" class="grid-cols-1 w-1/1 h-1/1">
+                            <img src="./public/img/Image 7.png" alt="" class="grid-cols-1 w-1/1 h-auto">
 
                             <div class="grid-cols-1">
-                                <div class="text-[var(--purple)] font-semibold mt-4">
+                                <div class="text-[var(--purple)] font-semibold mt-4 md:mt-0">
                                     <a href="#" class="info-heading animate">Olivia Rhye</a> &bull; <a href="#" class="animate">1 Jan 2025</a>
                                 </div>
                                 <a href="#" class="mt-4 mb-2 flex items-center justify-between font-bold text-2xl animate">UX review presentation<i class="bx bx-link-external"></i></a>
@@ -126,11 +126,11 @@
 
                     <!--grid-child 2.2-->
                     <div class="grid-cols-1">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <img src="./img/Image 6.png" alt="" class="grid-cols-1 w-1/1 h-1/1">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+                            <img src="./public/img/Image 6.png" alt="" class="grid-cols-1 w-1/1 h-auto">
 
-                            <div class="grid-cols-1">
-                                <div class="text-[var(--purple)] font-semibold mt-4">
+                            <div class="grid-cols-1 mt-4 md:mt-0">
+                                <div class="text-[var(--purple)] font-semibold">
                                     <a href="#" class="info-heading animate">Olivia Rhye</a> &bull; <a href="#" class="animate">1 Jan 2025</a>
                                 </div>
                                 <a href="#" class="mt-4 mb-2 flex items-center justify-between font-bold text-2xl animate">UX review presentation<i class="bx bx-link-external"></i></a>
@@ -151,16 +151,16 @@
         </div>
     </section>
 
-    <section id="blog-posts">
+    <section id="blog-post">
         <div class="container mx-auto px-4 py-6">
-            <h3 class="font-semibold text-xl pb-6">All blog posts</h3>
+            <h3 class="font-semibold text-2xl pb-6">All blog posts</h3>
 
             <!--all blog post container-->
-            <div class=" grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div class=" grid grid-cols-1 gap-8 md:gap-7 md:grid-cols-3">
 
                 <!--post\-->
                 <div class="grid grid-cols-1 gap-4">
-                    <img src="./img/Image 7.png" alt="" class="grid-cols-1 w-1/1 h-1/1">
+                    <img src="./public/img/Image 7.png" alt="" class="grid-cols-1 w-1/1 h-auto">
 
                     <div class="grid-cols-1">
                         <div class="text-[var(--purple)] font-semibold mt-4">
@@ -181,7 +181,7 @@
 
                 <!--post\-->
                 <div class="grid grid-cols-1 gap-4">
-                    <img src="./img/Image 9.png" alt="" class="grid-cols-1 w-1/1 h-1/1">
+                    <img src="./public/img/Image 9.png" alt="" class="grid-cols-1 w-1/1 h-auto">
 
                     <div class="grid-cols-1">
                         <div class="text-[var(--purple)] font-semibold mt-4">
@@ -202,7 +202,7 @@
 
                 <!--post\-->
                 <div class="grid grid-cols-1 gap-4">
-                    <img src="./img/Image 3.png" alt="" class="grid-cols-1 w-1/1 h-1/1">
+                    <img src="./public/img/Image 3.png" alt="" class="grid-cols-1 w-1/1 h-auto">
 
                     <div class="grid-cols-1">
                         <div class="text-[var(--purple)] font-semibold mt-4">
@@ -223,7 +223,7 @@
 
                 <!--post\-->
                 <div class="grid grid-cols-1 gap-4">
-                    <img src="./img/Image 5.png" alt="" class="grid-cols-1 w-1/1 h-1/1">
+                    <img src="./public/img/Image 5.png" alt="" class="grid-cols-1 w-1/1 h-auto">
 
                     <div class="grid-cols-1">
                         <div class="text-[var(--purple)] font-semibold mt-4">
@@ -244,7 +244,7 @@
 
                 <!--post\-->
                 <div class="grid grid-cols-1 gap-4">
-                    <img src="./img/Image 9.png" alt="" class="grid-cols-1 w-1/1 h-1/1">
+                    <img src="./public/img/Image 9.png" alt="" class="grid-cols-1 w-1/1 h-auto">
 
                     <div class="grid-cols-1">
                         <div class="text-[var(--purple)] font-semibold mt-4">
@@ -265,7 +265,7 @@
 
                 <!--post\-->
                 <div class="grid grid-cols-1 gap-4">
-                    <img src="./img/Image 8.png" alt="" class="grid-cols-1 w-1/1 h-1/1">
+                    <img src="./public/img/Image 8.png" alt="" class="grid-cols-1 w-1/1 h-auto">
 
                     <div class="grid-cols-1">
                         <div class="text-[var(--purple)] font-semibold mt-4">
@@ -325,6 +325,6 @@
             </div>
         </div>
     </footer>
-    <script src="./js/main.js"></script>
+    <script src="./public/js/main.js"></script>
 </body>
 </html>
