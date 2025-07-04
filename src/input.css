@@ -67,7 +67,10 @@ a.animate:hover::after {
 }
 
 
-
+a.animate.active::after{
+    width: 100%;
+    left: 0;
+}
 /* NAVBAR */
 nav a.animate::after{
     background-color: var(--var-black);
