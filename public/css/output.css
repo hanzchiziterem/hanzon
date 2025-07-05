@@ -558,7 +558,7 @@ a.animate::after {
   left: 50%;
   bottom: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
   transition: width 0.3s ease, left 0.3s ease;
 }
 a.animate:hover::after {
