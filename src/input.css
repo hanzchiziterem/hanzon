@@ -62,7 +62,7 @@ a.animate::after {
 }
           
 a.animate:hover::after {
-    width: 100%;
+    width: fit-content;
     left: 0;
 }
 
@@ -83,7 +83,7 @@ nav.navbar.scrolled {
 
 /* HERO */
 #hero h1 {
-  font-size: clamp(3rem, 18svw, 17em);
+  font-size: clamp(3rem, 16svw, 17em);
   line-height: 1;
   white-space: nowrap;
   margin: 0;

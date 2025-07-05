@@ -562,7 +562,7 @@ a.animate::after {
   transition: width 0.3s ease, left 0.3s ease;
 }
 a.animate:hover::after {
-  width: 100%;
+  width: fit-content;
   left: 0;
 }
 a.animate.active::after {
@@ -576,7 +576,7 @@ nav.navbar.scrolled {
   border-bottom: 1px solid var(--gray);
 }
 #hero h1 {
-  font-size: clamp(3rem, 18svw, 17em);
+  font-size: clamp(3rem, 16svw, 17em);
   line-height: 1;
   white-space: nowrap;
   margin: 0;
