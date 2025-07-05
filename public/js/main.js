@@ -76,6 +76,30 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
+//Projects Typing Script
+const textProj = "Projects";
+const typingSpeedProj = 150; // ms between letters
+
+window.addEventListener("DOMContentLoaded", () => {
+  const target = document.getElementById("type-text-projects");
+
+  // Loop through each character and schedule its insertion
+  [...textProj].forEach((char, i) => {
+    setTimeout(() => {
+      const span = document.createElement("span");
+      span.classList.add("letter");
+      span.textContent = char;
+      target.appendChild(span);
+
+      // trigger the fade‑in on the next paint
+      requestAnimationFrame(() => {
+        span.style.opacity = 1;
+      });
+    }, typingSpeedProj * i);
+  });
+})
+
+
 //Bavk to top script
 const topBtn = document.getElementById('backToTop');
 
