@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hanzon Blog - Home</title>
+    <title>Hanzon Blog - Projects</title>
 
     <!--stylesheet-->
     <link rel="stylesheet" href="./public/css/output.css">
@@ -20,148 +20,70 @@
     <!-- in your head, before loading tailwindcss.com -->
 </head>
 <body class="bg-[var(--bg-color)] text-[var(--text-color)]">
-<!-- Navbar -->
-<nav class="container max-w-[1400px] flex flex-col md:flex-row justify-between items-start md:items-center mx-auto p-4 text-lg font-semibold sticky top-0 bg-[var(--bg-color)] z-50 navbar" id="navbar">
-  <!-- Top row: logo & button -->
-  <div class="w-full flex justify-between items-center">
-    <a href="./profile.html" class="animate logo">Your Name</a>
 
-    <!-- Hamburger -->
-    <button id="menu-btn" class="hamburger md:hidden" type="button" title="hamburger">
-      <span class="hamburger-top"></span>
-      <span class="hamburger-middle"></span>
-      <span class="hamburger-bottom"></span>
-    </button>
-  </div>
+    <!-- Navbar -->
+    <nav class="container max-w-[1400px] flex flex-col md:flex-row justify-between items-start md:items-center mx-auto p-4 text-lg font-semibold sticky top-0 bg-[var(--bg-color)] z-50 navbar" id="navbar">
+    <!-- Top row: logo & button -->
+    <div class="w-full flex justify-between items-center">
+        <a href="./index.html" class="animate logo">Your Name</a>
 
-  <!-- Mobile Dropdown (hidden by default, visible when menu opens) -->
-  <div id="menu" class="w-full max-h-0 overflow-hidden transition-all duration-200 md:hidden">
-    <ul class="flex flex-col gap-4 py-4">
-      <li><a href="./blog.html" class="block animate">Blog</a></li>
-      <li><a href="./projects.html" class="block animate">Projects</a></li>
-      <li><a href="./about.html" class="block animate">About</a></li>
-      <li><a href="./newsletter.html" class="block animate">Newsletter</a></li>
-    </ul>
-    <label class="theme-toggle flex items-center gap-2 pb-4">
-      <input type="checkbox" id="theme-checkbox" />
-      <i class='bx bx-sun icon'></i>
-      <i class='bx bx-moon icon'></i>
-      <span class="slider"></span>
-    </label>
-  </div>
+        <!-- Hamburger -->
+        <button id="menu-btn" class="hamburger md:hidden" type="button" title="hamburger">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+        </button>
+    </div>
 
-  <!-- Desktop Menu -->
-  <div class="hidden md:flex gap-8 items-center ml-auto">
-    <ul class="flex gap-8">
-      <li><a href="./blog.html" class="animate">Blog</a></li>
-      <li><a href="./projects.html" class="animate">Projects</a></li>
-      <li><a href="./about.html" class="animate">About</a></li>
-      <li><a href="./newsletter.html" class="animate">Newsletter</a></li>
-    </ul>
-    <label class="theme-toggle">
-      <input type="checkbox" id="theme-checkbox" />
-      <i class='bx bx-sun icon'></i>
-      <i class='bx bx-moon icon'></i>
-      <span class="slider"></span>
-    </label>
-  </div>
-</nav>
+    <!-- Mobile Dropdown (hidden by default, visible when menu opens) -->
+    <div id="menu" class="w-full max-h-0 overflow-hidden transition-all duration-200 md:hidden">
+        <ul class="flex flex-col gap-4 py-4">
+        <li><a href="#" class="block animate">Blog</a></li>
+        <li><a href="./index.html" class="block animate active">Projects</a></li>
+        <li><a href="#" class="block animate">About</a></li>
+        <li><a href="#" class="block animate">Newsletter</a></li>
+        </ul>
+        <label class="theme-toggle flex items-center gap-2 pb-4">
+        <input type="checkbox" id="theme-checkbox" />
+        <i class='bx bx-sun icon'></i>
+        <i class='bx bx-moon icon'></i>
+        <span class="slider"></span>
+        </label>
+    </div>
 
-
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-8 items-center ml-auto">
+        <ul class="flex gap-8">
+        <li><a href="#" class="animate">Blog</a></li>
+        <li><a href="./index.html" class="animate active">Projects</a></li>
+        <li><a href="#" class="animate">About</a></li>
+        <li><a href="#" class="animate">Newsletter</a></li>
+        </ul>
+        <label class="theme-toggle">
+        <input type="checkbox" id="theme-checkbox" />
+        <i class='bx bx-sun icon'></i>
+        <i class='bx bx-moon icon'></i>
+        <span class="slider"></span>
+        </label>
+    </div>
+    </nav>
 
     <section id="hero">
         <div class=" container max-w-[1400px] mx-auto p-4 pb-8 flex items-center justify-center border-b-[var(--gray)] border-b border-t border-t-[var(--gray)]">
-            <h1 class="uppercase text-center font-bold pt-4" id="type-text"></h1> <!--Type hanzon from js-->
-        </div>
-    </section>
-
-    <section id="recent-posts">
-        <div class="container max-w-[1400px] mx-auto px-4 py-6">
-            <h3 class="font-semibold text-2xl pb-6">Recent blog posts</h3>
-
-            <div class=" grid grid-cols-1  gap-8 md:gap-7 md:grid-cols-2">
-
-                <!--grid child 1 (The long grid/first grid to the left)-->
-                <div class="grid-cols-1">
-                    <img src="./public/img/Fix.png" alt="" class="w-full h-auto">
-                    <div class="text-[var(--purple)] font-semibold mt-4 ">
-                        <a href="#" class="info-heading animate">Olivia Rhye</a> &bull; <a href="#" class="animate">1 Jan 2025</a>
-                    </div>
-                    <a href="#" class="mt-4 mb-2 flex items-center justify-between font-bold text-2xl animate">UX review presentation<i class="bx bx-link-external"></i></a>
-                    <p>How do you create compelling presentations that view your colleagues and impress your managers?</p>
-
-                    <div class=" mt-4 flex items-center gap-2">
-                        <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear ">Design</a>
-
-                        <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--pink)] bg-[var(--bg-pink)] hover:text-[var(--white)] hover:bg-[var(--pink)] duration-200 ease-linear">Presentation</a>
-
-                        <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear">Research</a>
-                    </div>
-                </div>
-
-                <!--grid child 2-->
-                <div class="grid-cols-1 md:space-y-6 space-y-8">
-
-                    <!--grid-child 2.1-->
-                    <div class="grid-cols-1">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <img src="./public/img/Image 7.png" alt="" class="grid-cols-1 w-full h-auto">
-
-                            <div class="grid-cols-1">
-                                <div class="text-[var(--purple)] font-semibold mt-4 md:mt-0">
-                                    <a href="#" class="info-heading animate">Olivia Rhye</a> &bull; <a href="#" class="animate">1 Jan 2025</a>
-                                </div>
-                                <a href="#" class="mt-4 mb-2 flex items-center justify-between font-bold text-2xl animate">UX review presentation<i class="bx bx-link-external"></i></a>
-                                <p>How do you create compelling presentations that view your colleagues and impress your managers?</p>
-
-                                <div class=" mt-4 flex flex-wrap items-center gap-2">
-                                    <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear ">Design</a>
-
-                                    <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--pink)] bg-[var(--bg-pink)] hover:text-[var(--white)] hover:bg-[var(--pink)] duration-200 ease-linear">Presentation</a>
-
-                                    <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear">Research</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--grid-child 2.2-->
-                    <div class="grid-cols-1">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
-                            <img src="./public/img/Image 6.png" alt="" class="grid-cols-1 w-full h-auto">
-
-                            <div class="grid-cols-1 mt-4 md:mt-0">
-                                <div class="text-[var(--purple)] font-semibold">
-                                    <a href="#" class="info-heading animate">Olivia Rhye</a> &bull; <a href="#" class="animate">1 Jan 2025</a>
-                                </div>
-                                <a href="#" class="mt-4 mb-2 flex items-center justify-between font-bold text-2xl animate">UX review presentation<i class="bx bx-link-external"></i></a>
-                                <p>How do you create compelling presentations that view your colleagues and impress your managers?</p>
-
-                                <div class=" mt-4 flex flex-wrap items-center gap-2">
-                                    <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear ">Design</a>
-
-                                    <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--pink)] bg-[var(--bg-pink)] hover:text-[var(--white)] hover:bg-[var(--pink)] duration-200 ease-linear">Presentation</a>
-
-                                    <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear">Research</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h1 class="uppercase text-center font-bold" id="type-text-projects"></h1> <!--Type hanzon from js-->
         </div>
     </section>
 
     <section id="blog-post">
         <div class="container max-w-[1400px] mx-auto px-4 py-6">
-            <h3 class="font-semibold text-2xl pb-6">All blog posts</h3>
+            <h3 class="font-semibold text-2xl pb-6">List projects</h3>
 
             <!--all blog post container-->
             <div class=" grid grid-cols-1 gap-8 md:gap-7 md:grid-cols-3">
 
                 <!--post\-->
                 <div class="grid grid-cols-1 gap-4">
-                    <img src="./public/img/Image 7.png" alt="" class="grid-cols-1 w-full h-auto">
+                    <img src="./public/img/Image a.png" alt="" class="grid-cols-1 w-full h-auto">
 
                     <div class="grid-cols-1">
                         <div class="text-[var(--purple)] font-semibold mt-4">
@@ -182,7 +104,7 @@
 
                 <!--post\-->
                 <div class="grid grid-cols-1 gap-4">
-                    <img src="./public/img/Image 9.png" alt="" class="grid-cols-1 w-full h-auto">
+                    <img src="./public/img/imgb.png" alt="" class="grid-cols-1 w-full h-auto">
 
                     <div class="grid-cols-1">
                         <div class="text-[var(--purple)] font-semibold mt-4">
@@ -203,7 +125,28 @@
 
                 <!--post\-->
                 <div class="grid grid-cols-1 gap-4">
-                    <img src="./public/img/Image 3.png" alt="" class="grid-cols-1 w-full h-auto">
+                    <img src="./public/img/Image c.png" alt="" class="grid-cols-1 w-full h-auto">
+
+                    <div class="grid-cols-1">
+                        <div class="text-[var(--purple)] font-semibold mt-4">
+                            <a href="#" class="info-heading animate">Olivia Rhye</a> &bull; <a href="#" class="animate">1 Jan 2025</a>
+                        </div>
+                        <a href="#" class="mt-4 mb-2 flex items-center justify-between font-bold text-2xl animate">UX review presentation<i class="bx bx-link-external"></i></a>
+                        <p>How do you create compelling presentations that view your colleagues and impress your managers?</p>
+
+                        <div class=" mt-4 flex flex-wrap items-center gap-2">
+                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear ">Design</a>
+
+                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--pink)] bg-[var(--bg-pink)] hover:text-[var(--white)] hover:bg-[var(--pink)] duration-200 ease-linear">Presentation</a>
+
+                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear">Research</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--post\-->
+                <div class="grid grid-cols-1 gap-4">
+                    <img src="./public/img/Image d.png" alt="" class="grid-cols-1 w-full h-auto">
 
                     <div class="grid-cols-1">
                         <div class="text-[var(--purple)] font-semibold mt-4">
@@ -225,27 +168,6 @@
                 <!--post\-->
                 <div class="grid grid-cols-1 gap-4">
                     <img src="./public/img/Image 5.png" alt="" class="grid-cols-1 w-full h-auto">
-
-                    <div class="grid-cols-1">
-                        <div class="text-[var(--purple)] font-semibold mt-4">
-                            <a href="#" class="info-heading animate">Olivia Rhye</a> &bull; <a href="#" class="animate">1 Jan 2025</a>
-                        </div>
-                        <a href="#" class="mt-4 mb-2 flex items-center justify-between font-bold text-2xl animate">UX review presentation<i class="bx bx-link-external"></i></a>
-                        <p>How do you create compelling presentations that view your colleagues and impress your managers?</p>
-
-                        <div class=" mt-4 flex flex-wrap items-center gap-2">
-                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear ">Design</a>
-
-                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--pink)] bg-[var(--bg-pink)] hover:text-[var(--white)] hover:bg-[var(--pink)] duration-200 ease-linear">Presentation</a>
-
-                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear">Research</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!--post\-->
-                <div class="grid grid-cols-1 gap-4">
-                    <img src="./public/img/Image 9.png" alt="" class="grid-cols-1 w-full h-auto">
 
                     <div class="grid-cols-1">
                         <div class="text-[var(--purple)] font-semibold mt-4">
@@ -326,6 +248,7 @@
             </div>
         </div>
     </footer>
+
     <script src="./public/js/main.js"></script>
 </body>
 </html>
