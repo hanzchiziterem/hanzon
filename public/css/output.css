@@ -576,7 +576,7 @@ nav.navbar.scrolled {
   border-bottom: 1px solid var(--gray);
 }
 #hero h1 {
-  font-size: clamp(3rem, 22vw, 17em);
+  font-size: clamp(3rem, 20svw, 17em);
   line-height: 1;
   white-space: nowrap;
   margin: 0;
