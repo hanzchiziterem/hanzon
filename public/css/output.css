@@ -14,8 +14,12 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --default-transition-duration: 150ms;
@@ -209,6 +213,12 @@
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
   .ml-auto {
     margin-left: auto;
   }
@@ -232,6 +242,9 @@
   }
   .max-h-\[500px\] {
     max-height: 500px;
+  }
+  .w-\[60\%\] {
+    width: 60%;
   }
   .w-full {
     width: 100%;
@@ -368,6 +381,10 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
+  .text-6xl {
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
+  }
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
@@ -379,6 +396,10 @@
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -518,10 +539,7 @@
     }
   }
 }
-@font-face {
-  font-family: 'Inter';
-  src: url(../public/css/fonts/Inter-VariableFont_wght.ttf) format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root {
   --theme-btn-color: #1a1a1a;
   --theme-btn-boredr: #f3f3f3;
@@ -530,6 +548,7 @@
   --var-black: #1a1a1a;
   --black: #1a1a1a;
   --gray: #c0c0c063;
+  --light-gray: #a8a8a8;
   --purple: #6941c6;
   --bg-purple: #f9f5ff;
   --blue: #026aa2;
@@ -550,6 +569,9 @@ html.dark {
 }
 body {
   font-family: 'inter', system-ui, -apple-system;
+}
+p {
+  color: #667085;
 }
 a.animate {
   position: relative;

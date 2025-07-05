@@ -1,9 +1,6 @@
 @import 'tailwindcss';
 
-@font-face {
-    font-family: 'Inter';
-    src: url(../public/css/fonts/Inter-VariableFont_wght.ttf) format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root{
     /* components */
@@ -16,6 +13,7 @@
 
     --black: #1a1a1a;
     --gray: #c0c0c063;
+    --light-gray: #a8a8a8;
 
     --purple: #6941c6;
     --bg-purple: #f9f5ff;
@@ -42,7 +40,9 @@ html.dark{
 body{
     font-family: 'inter', system-ui, -apple-system;
 }
-
+p{
+    color: #667085;
+}
 /* GENERAL */
 /* animated hover */
 a.animate {
