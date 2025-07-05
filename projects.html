@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hanzon Blog - Projects</title>
+
+    <!--stylesheet-->
+    <link rel="stylesheet" href="./public/css/output.css">
+
+    <!--CDNs Online-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--CDNs Offline-->
+    <link rel="stylesheet" href="./public/css/boxicons/css/boxicons.min.css">
+
+    <!--npx @tailwindcss/cli -i ./src/input.css -o ./public/css/output.css --watch-->
+
+    <!-- in your head, before loading tailwindcss.com -->
+</head>
+<body class="bg-[var(--bg-color)] text-[var(--text-color)]">
+
+    <!-- Navbar -->
+    <nav class="container max-w-[1400px] flex flex-col md:flex-row justify-between items-start md:items-center mx-auto p-4 text-lg font-semibold sticky top-0 bg-[var(--bg-color)] z-50 navbar" id="navbar">
+    <!-- Top row: logo & button -->
+    <div class="w-full flex justify-between items-center">
+        <a href="./index.html" class="animate logo">Your Name</a>
+
+        <!-- Hamburger -->
+        <button id="menu-btn" class="hamburger md:hidden" type="button" title="hamburger">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+        </button>
+    </div>
+
+    <!-- Mobile Dropdown (hidden by default, visible when menu opens) -->
+    <div id="menu" class="w-full max-h-0 overflow-hidden transition-all duration-200 md:hidden">
+        <ul class="flex flex-col gap-4 py-4">
+        <li><a href="#" class="block animate">Blog</a></li>
+        <li><a href="./index.html" class="block animate active">Projects</a></li>
+        <li><a href="#" class="block animate">About</a></li>
+        <li><a href="#" class="block animate">Newsletter</a></li>
+        </ul>
+        <label class="theme-toggle flex items-center gap-2 pb-4">
+        <input type="checkbox" id="theme-checkbox" />
+        <i class='bx bx-sun icon'></i>
+        <i class='bx bx-moon icon'></i>
+        <span class="slider"></span>
+        </label>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-8 items-center ml-auto">
+        <ul class="flex gap-8">
+        <li><a href="#" class="animate">Blog</a></li>
+        <li><a href="./index.html" class="animate active">Projects</a></li>
+        <li><a href="#" class="animate">About</a></li>
+        <li><a href="#" class="animate">Newsletter</a></li>
+        </ul>
+        <label class="theme-toggle">
+        <input type="checkbox" id="theme-checkbox" />
+        <i class='bx bx-sun icon'></i>
+        <i class='bx bx-moon icon'></i>
+        <span class="slider"></span>
+        </label>
+    </div>
+    </nav>
+
+    <script src="./public/js/main.js"></script>
+</body>
+</html>
