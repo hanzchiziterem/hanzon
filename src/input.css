@@ -1,14 +1,12 @@
 @import 'tailwindcss';
 
-@font-face {
-    font-family: 'Inter';
-    src: url(../public/css/fonts/Inter-VariableFont_wght.ttf) format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root{
     /* components */
     --theme-btn-color: #1a1a1a; /* for theme btn*/
     --theme-btn-boredr: #f3f3f3; /* for theme btn*/
+    --input-text: #667085;
 
     --bg-color: #f3f3f3;
     --text-color: #1a1a1a;
@@ -16,6 +14,7 @@
 
     --black: #1a1a1a;
     --gray: #c0c0c063;
+    --dark-gray: #667085;
 
     --purple: #6941c6;
     --bg-purple: #f9f5ff;
@@ -37,12 +36,15 @@ html.dark{
     --text-color: #f3f3f3;
     --var-black: #f3f3f3;
     --var-white: #1a1a1a;
+    --dark-gray: #C0C5D0;
 }
 
 body{
     font-family: 'inter', system-ui, -apple-system;
 }
-
+p{
+    color: var(--dark-gray);
+}
 /* GENERAL */
 /* animated hover */
 a.animate {
