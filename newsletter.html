@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hanzon Blog - Newsletter</title>
+
+    <!--stylesheet-->
+    <link rel="stylesheet" href="./public/css/output.css">
+
+    <!--CDNs Online-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--CDNs Offline-->
+    <link rel="stylesheet" href="./public/css/boxicons/css/boxicons.min.css">
+
+    <!--npx @tailwindcss/cli -i ./src/input.css -o ./public/css/output.css --watch-->
+
+    <!-- in your head, before loading tailwindcss.com -->
+</head>
+<body class="bg-[var(--bg-color)] text-[var(--text-color)]">
+
+    <nav class="container max-w-[1400px] flex flex-col md:flex-row justify-between items-start md:items-center mx-auto p-4 text-lg font-semibold sticky top-0 bg-[var(--bg-color)] z-50 navbar" id="navbar">
+    <!-- Top row: logo & button -->
+    <div class="w-full flex justify-between items-center">
+        <a href="./profile.html" class="animate logo">Your Name</a>
+
+        <!-- Hamburger -->
+        <button id="menu-btn" class="hamburger md:hidden" type="button" title="hamburger">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+        </button>
+    </div>
+
+    <!-- Mobile Dropdown (hidden by default, visible when menu opens) -->
+    <div id="menu" class="w-full max-h-0 overflow-hidden transition-all duration-200 md:hidden">
+        <ul class="flex flex-col gap-4 py-4">
+        <li><a href="./blog.html" class="block animate">Blog</a></li>
+        <li><a href="./projects.html" class="block animate">Projects</a></li>
+        <li><a href="./about.html" class="block animate">About</a></li>
+        <li><a href="./newsletter.html" class="block animate active">Newsletter</a></li>
+        </ul>
+        <label class="theme-toggle flex items-center gap-2 pb-4">
+        <input type="checkbox" id="theme-checkbox" />
+        <i class='bx bx-sun icon'></i>
+        <i class='bx bx-moon icon'></i>
+        <span class="slider"></span>
+        </label>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-8 items-center ml-auto">
+        <ul class="flex gap-8">
+        <li><a href="./blog.html" class="animate">Blog</a></li>
+        <li><a href="./projects.html" class="animate">Projects</a></li>
+        <li><a href="./about.html" class="animate">About</a></li>
+        <li><a href="./newsletter.html" class="animate active">Newsletter</a></li>
+        </ul>
+        <label class="theme-toggle">
+        <input type="checkbox" id="theme-checkbox" />
+        <i class='bx bx-sun icon'></i>
+        <i class='bx bx-moon icon'></i>
+        <span class="slider"></span>
+        </label>
+    </div>
+    </nav>
+    
+    <section id="newsletter">
+        <div class="container max-w-[1400px] mx-auto px-4 py-6">
+            <h4 class="text-[var(--purple)] text-xl font-semibold text-center mb-4">Newsletter</h4>
+            <h2 class="text-6xl font-semibold text-center mb-6">Stories and interviews</h2>
+            <p class="text-center text-xl font-base w-full md:w-[60%] mx-auto mb-8">
+                Subscribe to learn about new product features, the latest in technology, solutions, and updates
+            </p>
+            <form action="#" class="mx-auto flex flex-col items-center justify-center">
+                <div class=" mb-2 space-x-2 flex flex-col items-center justify-center gap-4 md:block">
+                    <input type="email" placeholder="Enter your email" class="px-6 py-3 bg-[var(--white)] font-base border border-[var(--input-texct)] text-[var(--input-text)] rounded-sm placeholder:text-[var(--input-text)">
+                    <button type="submit" class="px-6 py-3 cursor-pointer font-medium bg-[var(--purple)] rounded-sm text-[var(--white)] duration-200">Subscribe</button>
+                </div>
+                <p class="text-sm">We care about your data in our <a href="#" class="underline">privacy policy</a></p>
+            </form>
+        </div>
+    </section>
+
+    <section id="blog-post">
+        <div class="container max-w-[1400px] mx-auto px-4 py-6">
+            <h3 class="font-semibold text-2xl pb-6">All blog posts</h3>
+
+            <!--all blog post container-->
+            <div class=" grid grid-cols-1 gap-8 md:gap-7 md:grid-cols-3">
+
+                <!--post\-->
+                <div class="grid grid-cols-1 gap-4">
+                    <img src="./public/img/Image 7.png" alt="" class="grid-cols-1 w-full h-auto">
+
+                    <div class="grid-cols-1">
+                        <div class="text-[var(--purple)] font-semibold mt-4">
+                            <a href="#" class="info-heading animate">Olivia Rhye</a> &bull; <a href="#" class="animate">1 Jan 2025</a>
+                        </div>
+                        <a href="#" class="mt-4 mb-2 flex items-center justify-between font-bold text-2xl animate">UX review presentation<i class="bx bx-link-external"></i></a>
+                        <p>How do you create compelling presentations that view your colleagues and impress your managers?</p>
+
+                        <div class=" mt-4 flex flex-wrap items-center gap-2">
+                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear ">Design</a>
+
+                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--pink)] bg-[var(--bg-pink)] hover:text-[var(--white)] hover:bg-[var(--pink)] duration-200 ease-linear">Presentation</a>
+
+                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear">Research</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--post\-->
+                <div class="grid grid-cols-1 gap-4">
+                    <img src="./public/img/Image 9.png" alt="" class="grid-cols-1 w-full h-auto">
+
+                    <div class="grid-cols-1">
+                        <div class="text-[var(--purple)] font-semibold mt-4">
+                            <a href="#" class="info-heading animate">Olivia Rhye</a> &bull; <a href="#" class="animate">1 Jan 2025</a>
+                        </div>
+                        <a href="#" class="mt-4 mb-2 flex items-center justify-between font-bold text-2xl animate">UX review presentation<i class="bx bx-link-external"></i></a>
+                        <p>How do you create compelling presentations that view your colleagues and impress your managers?</p>
+
+                        <div class=" mt-4 flex flex-wrap items-center gap-2">
+                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear ">Design</a>
+
+                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--pink)] bg-[var(--bg-pink)] hover:text-[var(--white)] hover:bg-[var(--pink)] duration-200 ease-linear">Presentation</a>
+
+                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear">Research</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--post\-->
+                <div class="grid grid-cols-1 gap-4">
+                    <img src="./public/img/Image 8.png" alt="" class="grid-cols-1 w-full h-auto">
+
+                    <div class="grid-cols-1">
+                        <div class="text-[var(--purple)] font-semibold mt-4">
+                            <a href="#" class="info-heading animate">Olivia Rhye</a> &bull; <a href="#" class="animate">1 Jan 2025</a>
+                        </div>
+                        <a href="#" class="mt-4 mb-2 flex items-center justify-between font-bold text-2xl animate">UX review presentation<i class="bx bx-link-external"></i></a>
+                        <p>How do you create compelling presentations that view your colleagues and impress your managers?</p>
+
+                        <div class=" mt-4 flex flex-wrap items-center gap-2">
+                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear ">Design</a>
+
+                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--pink)] bg-[var(--bg-pink)] hover:text-[var(--white)] hover:bg-[var(--pink)] duration-200 ease-linear">Presentation</a>
+
+                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear">Research</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container max-w-[1400px] mx-auto px-4 py-7 flex flex-col-reverse md:flex-row items-center justify-center md:justify-start gap-4">
+            <div class="flex items-center gap-4">
+                <a href="#" class="animate text-sm">&copy; Copyright 2025</a>
+                <a href="#" class ="animate text-sm">Add to Feedly</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#"><i class="bx bx-envelope text-2xl hover:text-[var(--purple)] duration-200"></i></a>
+                <a href="#"><i class="bx bxl-linkedin text-2xl hover:text-[var(--purple)] duration-200"></i></a>
+                <a href="#"><i class="bx bxl-twitter text-2xl hover:text-[var(--purple)] duration-200"></i></a>
+                <a href="#"><i class="bx bxl-facebook text-2xl hover:text-[var(--purple)] duration-200"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./public/js/main.js"></script>
+</body>
+</html>
