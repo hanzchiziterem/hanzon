@@ -21,9 +21,11 @@
 </head>
 <body class="bg-[var(--bg-color)] text-[var(--text-color)]">
 
-    <nav class="container max-w-[1400px] flex flex-col md:flex-row justify-between items-start md:items-center mx-auto p-4 text-lg font-semibold sticky top-0 bg-[var(--bg-color)] z-50 navbar" id="navbar">
+    <nav class="w-full sticky top-0 bg-[var(--bg-color)] z-50 navbar" id="navbar">
     <!-- Top row: logo & button -->
-    <div class="w-full flex justify-between items-center">
+
+    <div class="max-w-[1440px] flex flex-col md:flex-row justify-between items-start md:items-center mx-auto p-4 text-base font-semibold">
+            <div class="w-full flex justify-between items-center">
         <a href="./profile.html" class="animate logo">Your Name</a>
 
         <!-- Hamburger -->
@@ -65,10 +67,12 @@
         <span class="slider"></span>
         </label>
     </div>
+    </div>
+
     </nav>
     
     <section id="newsletter">
-        <div class="container max-w-[1400px] mx-auto px-4 py-6">
+        <div class="container max-w-[1440px] mx-auto px-4 py-6">
             <h4 class="text-[var(--purple)] text-xl font-semibold text-center mb-4">Newsletter</h4>
             <h2 class="text-5xl md:text-6xl font-semibold text-center mb-6">Stories and interviews</h2>
             <p class="text-center text-lg md:text-xl font-base w-full md:w-[60%] mx-auto mb-8">
@@ -76,7 +80,7 @@
             </p>
             <form action="#" class="mx-auto flex flex-col items-center justify-center">
                 <div class=" mb-2 space-x-2 flex flex-col items-center justify-center gap-4 md:block">
-                    <input type="email" placeholder="Enter your email" class="px-6 py-3 bg-[var(--white)] font-base border border-[var(--input-text)] text-[var(--input-text)] rounded-sm placeholder:text-[var(--input-text) outline-0 outline-none">
+                    <input type="email" placeholder="Enter your email" class="px-6 py-3 bg-[var(--white)] font-base border border-[var(--input-text)] text-[var(--input-text)] rounded-sm placeholder:text-[var(--input-text)] outline-0 outline-none">
                     <button type="submit" class="px-6 py-3 cursor-pointer font-medium bg-[var(--purple)] rounded-sm text-[var(--white)] duration-200">Subscribe</button>
                 </div>
                 <p class="text-sm">We care about your data in our <a href="#" class="underline">privacy policy</a></p>
@@ -85,7 +89,7 @@
     </section>
 
     <section id="blog-post">
-        <div class="container max-w-[1400px] mx-auto px-4 py-6">
+        <div class="container max-w-[1440px] mx-auto px-4 py-6">
             <h3 class="font-semibold text-2xl pb-6">All blog posts</h3>
 
             <!--all blog post container-->
@@ -103,11 +107,11 @@
                         <p>How do you create compelling presentations that view your colleagues and impress your managers?</p>
 
                         <div class=" mt-4 flex flex-wrap items-center gap-2">
-                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear ">Design</a>
+                            <a href="#" class="text-xs px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear ">Design</a>
 
-                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--pink)] bg-[var(--bg-pink)] hover:text-[var(--white)] hover:bg-[var(--pink)] duration-200 ease-linear">Presentation</a>
+                            <a href="#" class="text-xs px-5 py-1 rounded-full text-[var(--pink)] bg-[var(--bg-pink)] hover:text-[var(--white)] hover:bg-[var(--pink)] duration-200 ease-linear">Presentation</a>
 
-                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear">Research</a>
+                            <a href="#" class="text-xs px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear">Research</a>
                         </div>
                     </div>
                 </div>
@@ -124,11 +128,11 @@
                         <p>How do you create compelling presentations that view your colleagues and impress your managers?</p>
 
                         <div class=" mt-4 flex flex-wrap items-center gap-2">
-                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear ">Design</a>
+                            <a href="#" class="text-xs px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear ">Design</a>
 
-                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--pink)] bg-[var(--bg-pink)] hover:text-[var(--white)] hover:bg-[var(--pink)] duration-200 ease-linear">Presentation</a>
+                            <a href="#" class="text-xs px-5 py-1 rounded-full text-[var(--pink)] bg-[var(--bg-pink)] hover:text-[var(--white)] hover:bg-[var(--pink)] duration-200 ease-linear">Presentation</a>
 
-                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear">Research</a>
+                            <a href="#" class="text-xs px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear">Research</a>
                         </div>
                     </div>
                 </div>
@@ -145,11 +149,11 @@
                         <p>How do you create compelling presentations that view your colleagues and impress your managers?</p>
 
                         <div class=" mt-4 flex flex-wrap items-center gap-2">
-                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear ">Design</a>
+                            <a href="#" class="text-xs px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear ">Design</a>
 
-                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--pink)] bg-[var(--bg-pink)] hover:text-[var(--white)] hover:bg-[var(--pink)] duration-200 ease-linear">Presentation</a>
+                            <a href="#" class="text-xs px-5 py-1 rounded-full text-[var(--pink)] bg-[var(--bg-pink)] hover:text-[var(--white)] hover:bg-[var(--pink)] duration-200 ease-linear">Presentation</a>
 
-                            <a href="#" class="text-sm px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear">Research</a>
+                            <a href="#" class="text-xs px-5 py-1 rounded-full text-[var(--blue)] bg-[var(--bg-blue)] hover:text-[var(--white)] hover:bg-[var(--blue)] duration-200 ease-linear">Research</a>
                         </div>
                     </div>
                 </div>
@@ -158,7 +162,7 @@
     </section>
 
     <footer>
-        <div class="container max-w-[1400px] mx-auto px-4 py-7 flex flex-col-reverse md:flex-row items-center justify-center md:justify-start gap-4">
+        <div class="container max-w-[1440px] mx-auto px-4 py-7 flex flex-col-reverse md:flex-row items-center justify-center md:justify-start gap-4">
             <div class="flex items-center gap-4">
                 <a href="#" class="animate text-sm">&copy; Copyright 2025</a>
                 <a href="#" class ="animate text-sm">Add to Feedly</a>
