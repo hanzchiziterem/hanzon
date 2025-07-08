@@ -73,6 +73,13 @@ a.animate.active::after{
     width: 100%;
     left: 0;
 }
+
+
+/* general a.animate::after styling */
+a.animate::after{
+    background-color: var(--purple);
+}
+
 /* NAVBAR */
 nav a.animate::after{
     background-color: var(--var-black);
@@ -89,16 +96,6 @@ nav.navbar.scrolled {
   line-height: 1;
   white-space: nowrap;
   margin: 0;
-}
-
-/* RECENT POSTS */
-#recent-posts a.animate::after{
-    background-color: var(--purple);
-}
-
-/* ALL BLOG POSTS */
-#blog-posts a.animate::after{
-    background-color: var(--purple);
 }
 
 /* PAGINATION */
