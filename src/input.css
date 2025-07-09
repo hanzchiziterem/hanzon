@@ -89,6 +89,12 @@ nav.navbar.scrolled {
     border-bottom: 1px solid var(--gray);
 }
 
+ @media (max-width:1024px){
+    nav.navbar {
+        border-bottom: 1px solid var(--gray);
+    }
+ }
+
 /* HERO */
 #hero h1 {
   font-size: clamp(3rem, 17svw, 17em);
