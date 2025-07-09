@@ -99,6 +99,29 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 })
 
+//Projects Typing Script
+const textProf = "Profile";
+const typingSpeedProf = 150; // ms between letters
+
+window.addEventListener("DOMContentLoaded", () => {
+  const target = document.getElementById("type-text-profile");
+
+  // Loop through each character and schedule its insertion
+  [...textProf].forEach((char, i) => {
+    setTimeout(() => {
+      const span = document.createElement("span");
+      span.classList.add("letter");
+      span.textContent = char;
+      target.appendChild(span);
+
+      // trigger the fade‑in on the next paint
+      requestAnimationFrame(() => {
+        span.style.opacity = 1;
+      });
+    }, typingSpeedProf * i);
+  });
+})
+
 
 //Bavk to top script
 const topBtn = document.getElementById('backToTop');
